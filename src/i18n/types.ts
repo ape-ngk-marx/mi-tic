@@ -13,6 +13,8 @@ export interface Translations {
     techStack: string;
     gallery: string;
     tiktok: string;
+    expertise: string;
+    media: string;
     letsTalk: string;
     toggleMenu: string;
   };
@@ -49,6 +51,7 @@ export interface Translations {
     technologies: string;
     challengesSolved: string;
     results: string;
+    visitSite: string;
   };
   architecture: {
     label: string;

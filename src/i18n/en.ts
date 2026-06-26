@@ -13,16 +13,18 @@ export const en: Translations = {
     techStack: "Tech Stack",
     gallery: "Gallery",
     tiktok: "TikTok",
+    expertise: "Expertise",
+    media: "Media",
     letsTalk: "Contact Us",
     toggleMenu: "Toggle menu",
   },
   hero: {
-    available: "Accepting remote missions worldwide",
+    available: "Talents available on-site & remote",
     companyName: "MI-TIC",
     titleLine1: "We Build Software That",
     titleHighlight: "Solves Business Problems",
     subtitle:
-      "MI-TIC is a technology company specializing in full-stack development, cloud architecture, and DevOps. We partner with organizations to design, build, and scale digital products — from SaaS platforms to mobile applications.",
+      "MI-TIC puts senior engineering talent at your disposal, on-site or remote, for short sprints or long-term engagements. We design, build, and scale digital products: SaaS platforms, cloud infrastructure, mobile apps, and DevOps delivery.",
     viewCaseStudies: "View Our Work",
     exploreArchitecture: "Our Architecture",
     meetFounder: "Meet the Founder",
@@ -38,7 +40,7 @@ export const en: Translations = {
       "Software Architecture",
       "Mobile Applications",
       "SaaS Platforms",
-      "Remote Missions",
+      "On-site & Remote Staffing",
     ],
   },
   founder: {
@@ -48,15 +50,15 @@ export const en: Translations = {
       "MI-TIC was founded by Marx N'Guessan, Senior Software Engineer with 8+ years of experience at companies including ape factory GmbH, Inetum, MMPG Softwares, and Novate Digital.",
     experienceTitle: "Professional Experience",
     remoteMissions:
-      "Marx accepts select remote freelance missions — available for architecture consulting, full-stack development, and DevOps engagements worldwide.",
-    bio: "Senior Software Engineer with 8+ years of experience delivering full-stack web, mobile, and cloud solutions across Europe and Africa. Currently Front-end Lead at ape factory GmbH, Marx founded MI-TIC to help businesses transform ideas into production-ready software.",
-    founderTitle: "Founder & Senior Software Engineer",
+      "MI-TIC provides senior engineers to client teams, on-site or remote, for missions ranging from a few weeks to several months. Architecture, full-stack, cloud, AI, and DevOps.",
+    bio: "Senior Software Engineer with 8+ years of experience delivering full-stack web, mobile, cloud, and AI solutions across Europe and Africa. At ape factory GmbH (Munich, Germany), Marx leads front-end architecture while contributing to cloud infrastructure, AI initiatives, and DevOps, including projects for Audi. He regularly travels to Europe for on-site client assignments and participates in international conferences such as Cloud Native Summit and VivaTech Paris. He founded MI-TIC to help businesses transform ideas into production-ready software.",
+    founderTitle: "Founder & Senior Software Engineer, Cloud, AI & Front-end",
   },
   projects: {
     label: "Case Studies",
     title: "Real Projects, Measurable Impact",
     description:
-      "From social platforms to SaaS products and mobile applications — discover how MI-TIC delivers business value through software engineering excellence.",
+      "Real client work across social platforms, automotive DevOps, real estate, e-commerce, and logistics. Delivered by MI-TIC talents, on-site or remote.",
     businessProblem: "Business Problem",
     solution: "Solution",
     architectureDecisions: "Architecture & Technical Decisions",
@@ -65,6 +67,7 @@ export const en: Translations = {
     technologies: "Technologies",
     challengesSolved: "Challenges Solved",
     results: "Results",
+    visitSite: "Visit website",
   },
   architecture: {
     label: "Software Architecture",
@@ -277,10 +280,10 @@ export const en: Translations = {
     titleLine1: "Ready to Transform",
     titleHighlight: "Your Next Digital Challenge?",
     description:
-      "Whether you need a technology partner to architect your next platform, scale an existing product, or deliver a complex project from idea to production — MI-TIC is ready to help.",
+      "Need senior engineers on your team, on-site or remote? MI-TIC staffs short sprints and long-term engagements, from architecture to production delivery.",
     getInTouch: "Get in Touch",
     linkedin: "LinkedIn",
-    availableWorldwide: "Available Worldwide (Remote)",
+    availableWorldwide: "On-site & Remote Worldwide",
     openSource: "Open Source Contributor",
     form: {
       name: "Full Name",

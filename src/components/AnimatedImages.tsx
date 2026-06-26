@@ -146,7 +146,7 @@ export function AnimatedImages() {
   const { t } = useTranslation();
 
   return (
-    <AnimatedSection id="gallery" className="py-24">
+    <AnimatedSection id="gallery" className="py-16">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           label={t.gallery.label}

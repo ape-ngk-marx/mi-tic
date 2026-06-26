@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
   CheckCircle2,
   ChevronDown,
   Code,
+  ExternalLink,
   Lightbulb,
   Target,
   TrendingUp,
@@ -23,7 +25,7 @@ export function Projects() {
   const project = projects[activeProject];
 
   return (
-    <AnimatedSection id="projects" className="py-24">
+    <AnimatedSection id="projects" className="py-16">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           label={t.projects.label}
@@ -36,13 +38,13 @@ export function Projects() {
             <button
               key={p.id}
               onClick={() => setActiveProject(i)}
-              className={`rounded-xl px-5 py-3 text-sm font-medium transition-all ${
+              className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${
                 activeProject === i
                   ? "bg-accent text-white shadow-lg shadow-accent/25"
                   : "border border-card-border bg-card text-muted hover:border-accent/50 hover:text-foreground"
               }`}
             >
-              {p.title}
+              {p.tabLabel}
             </button>
           ))}
         </div>
@@ -56,7 +58,31 @@ export function Projects() {
             transition={{ duration: 0.4 }}
             className="space-y-6"
           >
+            <div className="overflow-hidden rounded-2xl border border-card-border bg-card shadow-sm">
+              <div className="relative h-48 w-full overflow-hidden md:h-56">
+                <Image
+                  src={project.image}
+                  alt={project.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                />
+                {project.website && (
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute right-4 bottom-4 flex items-center gap-2 rounded-lg bg-card/90 px-4 py-2 text-sm font-medium text-accent shadow-sm backdrop-blur-sm transition-colors hover:bg-card"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    {t.projects.visitSite}
+                  </a>
+                )}
+              </div>
+            </div>
+
             <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-xl font-bold">{project.title}</h3>
               <span className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent">
                 {project.industry}
               </span>

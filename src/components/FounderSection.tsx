@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, MapPin, Briefcase, Code2 } from "lucide-react";
-import { founder, experiences } from "@/data/company";
+import { ExternalLink, MapPin, Code2, Briefcase } from "lucide-react";
+import { founder, getExperiences } from "@/data/company";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { AnimatedSection, SectionHeader } from "./AnimatedSection";
 
 export function FounderSection() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const experiences = getExperiences(locale);
 
   return (
-    <AnimatedSection id="founder" className="relative py-24">
+    <AnimatedSection id="founder" className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-accent-light/60 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader
@@ -31,11 +32,11 @@ export function FounderSection() {
                 MN
               </div>
               <h3 className="mb-1 text-2xl font-bold">{founder.name}</h3>
-              <p className="mb-4 text-accent-secondary font-medium">{t.founder.founderTitle}</p>
+              <p className="mb-4 font-medium text-accent-secondary">{t.founder.founderTitle}</p>
               <p className="mb-6 text-sm leading-relaxed text-muted">{t.founder.bio}</p>
 
               <div className="mb-6 flex items-center gap-2 text-sm text-muted">
-                <MapPin className="h-4 w-4 text-accent" />
+                <MapPin className="h-4 w-4 shrink-0 text-accent" />
                 {founder.location}
               </div>
 

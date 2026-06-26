@@ -11,6 +11,9 @@ import {
   Server,
 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import { AnimeHeroShapes } from "@/components/anime/AnimeHeroShapes";
+import { AnimeStaggerGrid } from "@/components/anime/AnimeStaggerGrid";
+import { AnimeStats } from "@/components/anime/AnimeStats";
 
 const capabilityIcons = [Code2, Cloud, Layers, Smartphone, Server, GitBranch];
 
@@ -20,6 +23,8 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
       <div className="absolute inset-0 grid-bg" />
+      <AnimeStaggerGrid />
+      <AnimeHeroShapes />
       <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-accent/8 blur-3xl" />
       <div className="absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-accent-secondary/10 blur-3xl" />
 
@@ -78,22 +83,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mb-16 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {t.hero.stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + i * 0.1 }}
-                className="rounded-xl border border-card-border bg-card p-4 shadow-sm"
-              >
-                <div className="text-2xl font-bold text-accent md:text-3xl">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
+          <AnimeStats stats={t.hero.stats} />
 
           <motion.div
             initial={{ opacity: 0 }}

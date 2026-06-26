@@ -27,7 +27,7 @@ export function EngineeringProcess() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <AnimatedSection id="process" className="py-24">
+    <AnimatedSection id="process" className="py-16">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           label={t.process.label}

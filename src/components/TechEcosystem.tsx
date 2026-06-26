@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Lightbulb, Star, Target } from "lucide-react";
 import { techCategories } from "@/data/techEcosystem";
@@ -17,17 +17,26 @@ const categoryColors: Record<string, string> = {
   architecture: "#6b9e8e",
 };
 
+function getFirstTechName(categoryId: string) {
+  return techCategories.find((c) => c.id === categoryId)!.technologies[0].name;
+}
+
 export function TechEcosystem() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState(techCategories[0].id);
-  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+  const [hoveredTech, setHoveredTech] = useState(() =>
+    getFirstTechName(techCategories[0].id),
+  );
 
   const category = techCategories.find((c) => c.id === activeCategory)!;
   const tech = category.technologies.find((item) => item.name === hoveredTech);
-  const color = categoryColors[activeCategory] || "#005151";
+
+  useEffect(() => {
+    setHoveredTech(getFirstTechName(activeCategory));
+  }, [activeCategory]);
 
   return (
-    <AnimatedSection id="tech-ecosystem" className="relative py-24">
+    <AnimatedSection id="tech-ecosystem" className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-light/40 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader
@@ -40,10 +49,7 @@ export function TechEcosystem() {
           {techCategories.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => {
-                setActiveCategory(cat.id);
-                setHoveredTech(null);
-              }}
+              onClick={() => setActiveCategory(cat.id)}
               className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? "bg-accent text-white shadow-lg shadow-accent/20"
@@ -86,7 +92,7 @@ export function TechEcosystem() {
 
           <div className="min-h-[320px]">
             <AnimatePresence mode="wait">
-              {tech ? (
+              {tech && (
                 <motion.div
                   key={tech.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -148,16 +154,6 @@ export function TechEcosystem() {
                       </ul>
                     </div>
                   </div>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="placeholder"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="flex h-full min-h-[320px] items-center justify-center rounded-2xl border border-dashed border-card-border bg-card/50 p-6"
-                >
-                  <p className="text-center text-muted">{t.techEcosystem.hoverHint}</p>
                 </motion.div>
               )}
             </AnimatePresence>

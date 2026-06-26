@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, MapPin, Code2 } from "lucide-react";
-import { company } from "@/data/company";
+import { founder } from "@/data/company";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { AnimatedSection } from "./AnimatedSection";
 import { ContactForm } from "./ContactForm";
@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <>
-      <AnimatedSection id="contact" className="py-24">
+      <AnimatedSection id="contact" className="py-16">
         <div className="mx-auto max-w-5xl px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function Footer() {
             <div className="flex flex-col gap-6 lg:col-span-2">
               <div className="rounded-2xl border border-card-border bg-card p-6 shadow-sm">
                 <a
-                  href={company.linkedin}
+                  href={founder.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl border border-card-border p-4 transition-all hover:border-accent/40 hover:bg-accent-light"

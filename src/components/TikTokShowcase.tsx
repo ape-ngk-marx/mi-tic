@@ -40,7 +40,7 @@ export function TikTokShowcase() {
   const { t, locale } = useTranslation();
 
   return (
-    <AnimatedSection id="tiktok" className="relative py-24">
+    <AnimatedSection id="tiktok" className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-accent-light/50 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader

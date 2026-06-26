@@ -13,16 +13,18 @@ export const fr: Translations = {
     techStack: "Technologies",
     gallery: "Galerie",
     tiktok: "TikTok",
+    expertise: "Expertise",
+    media: "Médias",
     letsTalk: "Nous Contacter",
     toggleMenu: "Ouvrir le menu",
   },
   hero: {
-    available: "Missions remote acceptées dans le monde entier",
+    available: "Talents disponibles sur site & en remote",
     companyName: "MI-TIC",
     titleLine1: "Nous Construisons des Logiciels Qui",
     titleHighlight: "Résolvent des Problèmes Métier",
     subtitle:
-      "MI-TIC est une entreprise technologique spécialisée en développement full-stack, architecture cloud et DevOps. Nous accompagnons les organisations dans la conception, le développement et la mise à l'échelle de produits digitaux — des plateformes SaaS aux applications mobiles.",
+      "MI-TIC met à disposition des entreprises des talents seniors, en présentiel ou en remote, pour des missions courtes comme longues. Nous concevons, développons et faisons évoluer des produits digitaux : plateformes SaaS, infrastructure cloud, applications mobiles et delivery DevOps.",
     viewCaseStudies: "Voir Nos Réalisations",
     exploreArchitecture: "Notre Architecture",
     meetFounder: "Rencontrer le Fondateur",
@@ -38,7 +40,7 @@ export const fr: Translations = {
       "Architecture Logicielle",
       "Applications Mobiles",
       "Plateformes SaaS",
-      "Missions Remote",
+      "Staffing sur site & remote",
     ],
   },
   founder: {
@@ -48,15 +50,15 @@ export const fr: Translations = {
       "MI-TIC a été fondée par Marx N'Guessan, Ingénieur Logiciel Senior avec plus de 8 ans d'expérience chez ape factory GmbH, Inetum, MMPG Softwares et Novate Digital.",
     experienceTitle: "Expérience Professionnelle",
     remoteMissions:
-      "Marx accepte des missions freelance remote sélectionnées — disponible pour du conseil en architecture, développement full-stack et engagements DevOps dans le monde entier.",
-    bio: "Ingénieur Logiciel Senior avec plus de 8 ans d'expérience en solutions web, mobile et cloud en Europe et en Afrique. Actuellement Front-end Lead chez ape factory GmbH, Marx a fondé MI-TIC pour accompagner les entreprises dans la transformation de leurs idées en logiciels prêts pour la production.",
-    founderTitle: "Fondateur & Ingénieur Logiciel Senior",
+      "MI-TIC met des ingénieurs seniors à disposition de vos équipes, sur site ou en remote, pour des missions de quelques semaines à plusieurs mois. Architecture, full-stack, cloud, IA et DevOps.",
+    bio: "Ingénieur Logiciel Senior avec plus de 8 ans d'expérience en solutions web, mobile, cloud et IA en Europe et en Afrique. Chez ape factory GmbH (Munich, Allemagne), Marx pilote l'architecture front-end tout en contribuant au cloud, à l'IA et au DevOps, notamment sur des projets pour Audi. Il se déplace régulièrement en Europe pour des missions clients sur site et participe à des conférences internationales comme le Cloud Native Summit et VivaTech Paris. Il a fondé MI-TIC pour accompagner les entreprises dans la transformation de leurs idées en logiciels prêts pour la production.",
+    founderTitle: "Fondateur & Ingénieur Logiciel Senior, Cloud, IA & Front-end",
   },
   projects: {
     label: "Études de Cas",
     title: "Projets Réels, Impact Mesurable",
     description:
-      "Des plateformes sociales aux produits SaaS et applications mobiles — découvrez comment MI-TIC apporte de la valeur métier grâce à l'excellence technique.",
+      "Des réalisations concrètes : plateforme sociale, DevOps automobile, immobilier, e-commerce et logistique. Livrées par les talents MI-TIC, sur site ou en remote.",
     businessProblem: "Problème Métier",
     solution: "Solution",
     architectureDecisions: "Architecture & Décisions Techniques",
@@ -65,6 +67,7 @@ export const fr: Translations = {
     technologies: "Technologies",
     challengesSolved: "Défis Résolus",
     results: "Résultats",
+    visitSite: "Visiter le site",
   },
   architecture: {
     label: "Architecture Logicielle",
@@ -277,10 +280,10 @@ export const fr: Translations = {
     titleLine1: "Prêt à Transformer",
     titleHighlight: "Votre Prochain Défi Digital ?",
     description:
-      "Que vous ayez besoin d'un partenaire technologique pour architecturer votre prochaine plateforme, scaler un produit existant ou livrer un projet complexe de l'idée à la production — MI-TIC est prêt à vous accompagner.",
+      "Besoin d'ingénieurs seniors dans vos équipes, sur site ou en remote ? MI-TIC propose des missions courtes comme longues, de l'architecture à la mise en production.",
     getInTouch: "Me Contacter",
     linkedin: "LinkedIn",
-    availableWorldwide: "Disponible Mondialement (Remote)",
+    availableWorldwide: "Sur site & remote, partout dans le monde",
     openSource: "Contributeur Open Source",
     form: {
       name: "Nom Complet",

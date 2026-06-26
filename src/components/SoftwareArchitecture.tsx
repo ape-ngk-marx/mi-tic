@@ -106,7 +106,7 @@ export function SoftwareArchitecture() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <AnimatedSection id="architecture" className="relative py-24">
+    <AnimatedSection id="architecture" className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-accent-light/60 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader

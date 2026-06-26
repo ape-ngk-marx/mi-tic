@@ -2,41 +2,41 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu,
-  X,
-  Code2,
-  Layers,
-  GitBranch,
-  Cpu,
-  Gauge,
-  Heart,
-  Network,
-  Briefcase,
-  Image,
-  Video,
-  User,
-} from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { DesktopNav, MobileNavGroups } from "./NavMenu";
 
 export function Navigation() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = [
-    { label: t.nav.founder, href: "#founder", icon: User },
-    { label: t.nav.projects, href: "#projects", icon: Briefcase },
-    { label: t.nav.architecture, href: "#architecture", icon: Layers },
-    { label: t.nav.process, href: "#process", icon: GitBranch },
-    { label: t.nav.devops, href: "#devops", icon: Cpu },
-    { label: t.nav.systemDesign, href: "#system-design", icon: Network },
-    { label: t.nav.performance, href: "#performance", icon: Gauge },
-    { label: t.nav.values, href: "#values", icon: Heart },
-    { label: t.nav.gallery, href: "#gallery", icon: Image },
-    { label: t.nav.tiktok, href: "#tiktok", icon: Video },
-    { label: t.nav.techStack, href: "#tech-ecosystem", icon: Code2 },
+  const primaryLinks = [
+    { label: t.nav.founder, href: "#founder" },
+    { label: t.nav.projects, href: "#projects" },
+  ];
+
+  const navGroups = [
+    {
+      label: t.nav.expertise,
+      items: [
+        { label: t.nav.architecture, href: "#architecture" },
+        { label: t.nav.process, href: "#process" },
+        { label: t.nav.devops, href: "#devops" },
+        { label: t.nav.systemDesign, href: "#system-design" },
+        { label: t.nav.performance, href: "#performance" },
+        { label: t.nav.values, href: "#values" },
+        { label: t.nav.techStack, href: "#tech-ecosystem" },
+      ],
+    },
+    {
+      label: t.nav.media,
+      items: [
+        { label: t.nav.gallery, href: "#gallery" },
+        { label: t.nav.tiktok, href: "#tiktok" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -64,16 +64,8 @@ export function Navigation() {
           <span className="text-lg font-bold text-accent">MI-TIC</span>
         </a>
 
-        <div className="hidden items-center gap-1 xl:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-accent-light hover:text-accent"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="hidden items-center gap-1 lg:flex">
+          <DesktopNav primaryLinks={primaryLinks} groups={navGroups} />
           <LanguageSwitcher />
           <a
             href="#contact"
@@ -83,7 +75,7 @@ export function Navigation() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <LanguageSwitcher />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -101,20 +93,14 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="border-t border-card-border bg-card/95 backdrop-blur-xl xl:hidden"
+            className="border-t border-card-border bg-card/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex max-h-[70vh] flex-col gap-1 overflow-y-auto px-6 py-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center gap-3 rounded-lg px-3 py-3 text-muted transition-colors hover:bg-accent-light hover:text-accent"
-                >
-                  <item.icon className="h-4 w-4" />
-                  {item.label}
-                </a>
-              ))}
+              <MobileNavGroups
+                primaryLinks={primaryLinks}
+                groups={navGroups}
+                onNavigate={() => setMobileOpen(false)}
+              />
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}

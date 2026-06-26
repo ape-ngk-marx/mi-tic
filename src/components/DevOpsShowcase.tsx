@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { AnimatedSection, SectionHeader } from "./AnimatedSection";
+import { AnimePipelineSvg } from "@/components/anime/AnimePipelineSvg";
 
 const stepIcons = [User, FolderGit2, GitBranch, Container, Package, Server, Cloud, Activity];
 const stepColors = ["#005151", "#588c7e", "#1a6b6b", "#3d7a6e", "#6b9e8e", "#005151", "#588c7e", "#2d8a6e"];
@@ -59,7 +60,7 @@ export function DevOpsShowcase() {
   };
 
   return (
-    <AnimatedSection id="devops" className="relative overflow-hidden py-24">
+    <AnimatedSection id="devops" className="relative overflow-hidden py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-light/40 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader
@@ -67,6 +68,8 @@ export function DevOpsShowcase() {
           title={t.devops.title}
           description={t.devops.description}
         />
+
+        <AnimePipelineSvg />
 
         <div ref={ref} className="mb-8">
           <div className="mb-4 flex items-center justify-between">

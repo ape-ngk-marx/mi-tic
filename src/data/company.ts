@@ -1,23 +1,4 @@
-export interface CompanyInfo {
-  name: string;
-  tagline: string;
-  description: string;
-  linkedin: string;
-  github: string;
-  location: string;
-  foundedYear: number;
-}
-
-export interface FounderInfo {
-  name: string;
-  title: string;
-  bio: string;
-  linkedin: string;
-  github: string;
-  location: string;
-  education: string[];
-  certifications: string[];
-}
+import type { Locale } from "@/i18n/types";
 
 export interface Experience {
   id: string;
@@ -29,75 +10,40 @@ export interface Experience {
   highlights: string[];
 }
 
-export const company: CompanyInfo = {
-  name: "MI-TIC",
-  tagline: "Cloud-native software engineering for ambitious businesses",
-  description:
-    "MI-TIC is a technology company specializing in full-stack development, cloud architecture, and DevOps. We partner with organizations to design, build, and scale digital products — from SaaS platforms to mobile applications.",
-  linkedin: "https://linkedin.com/in/marxnguessan",
-  github: "https://github.com/MarxNGuessan",
-  location: "Abidjan, Côte d'Ivoire — Remote worldwide",
-  foundedYear: 2024,
-};
-
-export const founder: FounderInfo = {
+export const founder = {
   name: "Marx N'Guessan",
-  title: "Founder & Senior Software Engineer",
-  bio:
-    "Senior Software Engineer with 8+ years of experience delivering full-stack web, mobile, and cloud solutions across Europe and Africa. Currently leading front-end architecture at ape factory GmbH, Marx founded MI-TIC to help businesses transform their ideas into production-ready software — and accepts select remote freelance missions.",
   linkedin: "https://linkedin.com/in/marxnguessan",
   github: "https://github.com/MarxNGuessan",
   location: "Abidjan, Côte d'Ivoire",
-  education: [
-    "Master DAS, Computer Engineering — UVCI (2023–2024)",
-    "BTS Software Engineering — ESIAS (2015–2017)",
-  ],
-  certifications: [
-    "Green Software for Practitioners — The Linux Foundation (2025)",
-    "Advanced SQL — Logical Query Processing — LinkedIn Learning",
-    "SQL Server 2019 Administrator — LinkedIn Learning",
-  ],
 };
 
-export const experiences: Experience[] = [
+const experiencesEn: Experience[] = [
   {
     id: "ape-factory",
     company: "ape factory GmbH",
-    role: "Senior Software Engineer — Front-end Lead",
-    period: "Sep 2021 — Present",
-    location: "Munich, Germany / Remote",
+    role: "Senior Software Engineer, Front-end Lead, Cloud & AI",
+    period: "Sep 2021 - Present",
+    location: "Munich, Germany · Remote & regular on-site in Europe",
     description:
-      "Cloud-native technology consulting firm crafting bespoke solutions for businesses across Europe and Africa.",
+      "German cloud-native consulting firm based in Munich. Remote from Côte d'Ivoire with regular on-site assignments across Europe, covering front-end leadership, cloud infrastructure, AI initiatives, and DevOps.",
     highlights: [
-      "Front-end lead on innovative, large-scale projects within a multidisciplinary team",
-      "Renovation of Hapiness House — 10-year-old social platform with 5,000+ active users",
-      "React, Next.js, Node.js, NestJS, MongoDB, Flutter, Docker, AWS, Kubernetes",
-      "Agile delivery with Jest, Cypress, GitHub Actions, SonarQube",
-    ],
-  },
-  {
-    id: "ape-factory-saas",
-    company: "ape factory GmbH",
-    role: "Senior Software Engineer (Remote) — SaaS Platform",
-    period: "Sep 2021 — Present",
-    location: "Remote",
-    description:
-      "Leadership of front-end architecture for a production SaaS platform serving thousands of active users.",
-    highlights: [
-      "Architected React / Next.js front-end for 12,500+ active users",
-      "Performance optimization — load times and user experience",
-      "Dockerized applications integrated into CI/CD pipelines",
-      "Unit and E2E testing (Jest, Cypress) reducing production incidents",
+      "Front-end lead: React, Next.js, TypeScript. Architecture, performance, and UX for production platforms",
+      "Cloud & AI: infrastructure design, cloud-native solutions, and AI initiatives with the ape factory team",
+      "DevOps for Audi: CI/CD pipelines, containerization, and cloud deployments for automotive client projects",
+      "Backend & integration: Node.js, NestJS, Express, JWT, MongoDB, REST APIs",
+      "DevOps & Cloud: Docker, AWS, Kubernetes, CI/CD (GitHub Actions), SonarQube",
+      "Hapiness House renovation (5,000+ users) + SaaS platform (12,500+ active users)",
+      "International conferences: Cloud Native Summit (2025 & 2026), VivaTech Paris",
+      "Regular travel to Europe for multi-week on-site client engagements",
     ],
   },
   {
     id: "inetum",
     company: "Inetum",
     role: "BSS Consultant",
-    period: "Apr 2024 — Jun 2024",
+    period: "Apr 2024 - Jun 2024",
     location: "Remote",
-    description:
-      "IT services and consulting for telecom BSS systems at one of Europe's largest IT firms.",
+    description: "IT services and consulting for telecom BSS systems at one of Europe's largest IT firms.",
     highlights: [
       "Log analysis and functional diagnostics",
       "Inter-system data flow mapping and consistency",
@@ -108,14 +54,11 @@ export const experiences: Experience[] = [
     id: "ahoko",
     company: "AHOKO",
     role: "Full Stack Developer & Project Manager",
-    period: "Jun 2021 — Sep 2021",
+    period: "Jun 2021 - Sep 2021",
     location: "Côte d'Ivoire",
-    description:
-      "Vehicle rental platform driving technological innovation in mobility services.",
+    description: "Vehicle rental platform driving technological innovation in mobility services.",
     highlights: [
-      "Led mobile app development for car rental service (AhokoRent V1.0.0)",
-      "Project management, database design, backend and frontend development",
-      "Deployed on Android and Apple stores within 3 months",
+      "Led AhokoRent V1.0.0, deployed on Android and iOS in 3 months",
       "React Native, PHP, MySQL, Agile/Trello",
     ],
   },
@@ -123,28 +66,103 @@ export const experiences: Experience[] = [
     id: "mmpg",
     company: "MMPG Softwares",
     role: "Senior Full Stack Developer",
-    period: "Aug 2019 — Jun 2021",
+    period: "Aug 2019 - Jun 2021",
     location: "Casablanca, Morocco",
-    description:
-      "Dynamic development team delivering innovative solutions across multiple industries.",
+    description: "Delivered platforms for real estate, e-commerce, and logistics clients across Morocco and West Africa.",
     highlights: [
-      "Real estate, nutrition, catering, and business management platforms",
-      "Led and successfully deployed multiple client projects",
-      "React, Next.js, Node.js, NestJS, MongoDB, Flutter, React Native, Firebase, Angular",
+      "Agenz.ma: front-end and API design (Node.js, PHP)",
+      "Yepia.ci: React, Node.js, production deployment",
+      "PCP Express: logistics and freight platform",
+      "React, Next.js, NestJS, MongoDB, Flutter, React Native",
     ],
   },
   {
     id: "novate",
     company: "Novate Digital",
-    role: "Full Stack Developer — Web & Mobile",
-    period: "Sep 2017 — Aug 2019",
+    role: "Full Stack Developer, Web & Mobile",
+    period: "Sep 2017 - Aug 2019",
     location: "Abidjan, Côte d'Ivoire",
-    description:
-      "Founding member of the IT Development department at a digital communications agency.",
+    description: "Founding member of the IT Development department at a digital communications agency.",
     highlights: [
-      "Major projects for the African Development Bank (AFDB) Digital Days event",
-      "Web and mobile application design and development",
+      "African Development Bank (AFDB) Digital Days platforms",
       "HTML/CSS, PHP, MySQL, Ionic, GitHub, GitLab",
     ],
   },
 ];
+
+const experiencesFr: Experience[] = [
+  {
+    id: "ape-factory",
+    company: "ape factory GmbH",
+    role: "Ingénieur Logiciel Senior, Lead Front-end, Cloud & IA",
+    period: "Sep 2021 - Aujourd'hui",
+    location: "Munich, Allemagne · Remote & déplacements réguliers en Europe",
+    description:
+      "Cabinet de conseil cloud-native basé à Munich. Mission en remote depuis la Côte d'Ivoire avec des déplacements réguliers en Europe, du lead front-end au cloud, à l'IA et au DevOps.",
+    highlights: [
+      "Lead front-end : React, Next.js, TypeScript. Architecture, performance et UX sur plateformes de production",
+      "Cloud & IA : conception d'infrastructure, solutions cloud-native et initiatives IA avec l'équipe ape factory",
+      "DevOps pour Audi : pipelines CI/CD, conteneurisation et déploiements cloud pour des projets clients automobile",
+      "Backend & intégration : Node.js, NestJS, Express, JWT, MongoDB, APIs REST",
+      "DevOps & Cloud : Docker, AWS, Kubernetes, CI/CD (GitHub Actions), SonarQube",
+      "Rénovation Hapiness House (5 000+ utilisateurs) + plateforme SaaS (12 500+ utilisateurs actifs)",
+      "Conférences internationales : Cloud Native Summit (2025 & 2026), VivaTech Paris",
+      "Déplacements réguliers en Europe pour des missions clients sur site de plusieurs semaines",
+    ],
+  },
+  {
+    id: "inetum",
+    company: "Inetum",
+    role: "Consultant BSS",
+    period: "Avr 2024 - Juin 2024",
+    location: "Remote",
+    description: "Services IT et conseil pour les systèmes BSS télécom chez l'un des plus grands acteurs IT européens.",
+    highlights: [
+      "Analyse de logs et diagnostic fonctionnel",
+      "Mapping et cohérence des flux de données inter-systèmes",
+      "Tests fonctionnels et validation BSS (UAT)",
+    ],
+  },
+  {
+    id: "ahoko",
+    company: "AHOKO",
+    role: "Développeur Full Stack & Chef de Projet",
+    period: "Juin 2021 - Sep 2021",
+    location: "Côte d'Ivoire",
+    description: "Plateforme de location de véhicules et innovation technologique dans la mobilité.",
+    highlights: [
+      "Livraison AhokoRent V1.0.0, déployé sur Android et iOS en 3 mois",
+      "React Native, PHP, MySQL, Agile/Trello",
+    ],
+  },
+  {
+    id: "mmpg",
+    company: "MMPG Softwares",
+    role: "Développeur Full Stack Senior",
+    period: "Août 2019 - Juin 2021",
+    location: "Casablanca, Maroc",
+    description: "Plateformes pour clients immobilier, e-commerce et logistique au Maroc et en Afrique de l'Ouest.",
+    highlights: [
+      "Agenz.ma : front-end et conception API (Node.js, PHP)",
+      "Yepia.ci : React, Node.js, déploiement production",
+      "PCP Express : plateforme logistique et fret",
+      "React, Next.js, NestJS, MongoDB, Flutter, React Native",
+    ],
+  },
+  {
+    id: "novate",
+    company: "Novate Digital",
+    role: "Développeur Full Stack, Web & Mobile",
+    period: "Sep 2017 - Août 2019",
+    location: "Abidjan, Côte d'Ivoire",
+    description: "Membre fondateur du département développement IT d'une agence de communication digitale.",
+    highlights: [
+      "Plateformes Digital Days de la Banque Africaine de Développement (BAD)",
+      "HTML/CSS, PHP, MySQL, Ionic, GitHub, GitLab",
+    ],
+  },
+];
+
+export function getExperiences(locale: Locale): Experience[] {
+  return locale === "fr" ? experiencesFr : experiencesEn;
+}

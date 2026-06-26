@@ -15,7 +15,7 @@ export function PerformanceEngineering() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <AnimatedSection id="performance" className="relative py-24">
+    <AnimatedSection id="performance" className="relative py-16">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-light/40 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionHeader
