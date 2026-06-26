@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MI-TIC | Senior Full Stack Engineer & Software Architect",
+  title: "MI-TIC | Technology Company — Full Stack, Cloud & DevOps",
   description:
-    "Senior Full Stack Engineer, DevOps Engineer, Cloud Engineer, and Software Architect. I build scalable software that solves complex business problems.",
+    "MI-TIC is a technology company specializing in full-stack development, cloud architecture, and DevOps. Founded by Marx N'Guessan. Remote missions accepted worldwide.",
 };
 
 export default function RootLayout({
@@ -27,9 +27,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-background text-foreground"
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

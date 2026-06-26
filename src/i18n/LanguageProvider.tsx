@@ -16,25 +16,34 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
+function readStoredLocale(): Locale {
+  try {
+    const saved = localStorage.getItem("locale");
+    if (saved === "en" || saved === "fr") return saved;
+  } catch {
+    // localStorage unavailable
+  }
+  return "en";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
 
   useEffect(() => {
-    const saved = localStorage.getItem("locale") as Locale | null;
-    if (saved === "en" || saved === "fr") {
-      setLocaleState(saved);
-    }
+    const saved = readStoredLocale();
+    setLocaleState(saved);
+    document.documentElement.lang = saved;
   }, []);
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
-    localStorage.setItem("locale", newLocale);
+    try {
+      localStorage.setItem("locale", newLocale);
+    } catch {
+      // localStorage unavailable
+    }
     document.documentElement.lang = newLocale;
   };
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
 
   return (
     <LanguageContext.Provider value={{ locale, t: translations[locale], setLocale }}>

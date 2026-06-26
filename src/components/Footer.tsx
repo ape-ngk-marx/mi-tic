@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, MapPin, Code2 } from "lucide-react";
+import { company } from "@/data/company";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { AnimatedSection } from "./AnimatedSection";
 import { ContactForm } from "./ContactForm";
@@ -43,7 +44,7 @@ export function Footer() {
             <div className="flex flex-col gap-6 lg:col-span-2">
               <div className="rounded-2xl border border-card-border bg-card p-6 shadow-sm">
                 <a
-                  href="https://linkedin.com"
+                  href={company.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl border border-card-border p-4 transition-all hover:border-accent/40 hover:bg-accent-light"
@@ -51,7 +52,7 @@ export function Footer() {
                   <ExternalLink className="h-5 w-5 text-accent" />
                   <div>
                     <div className="font-medium">{t.contact.linkedin}</div>
-                    <div className="text-sm text-muted">linkedin.com</div>
+                    <div className="text-sm text-muted">linkedin.com/in/marxnguessan</div>
                   </div>
                 </a>
               </div>
@@ -73,7 +74,7 @@ export function Footer() {
 
       <footer className="border-t border-card-border bg-card py-8">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
-          <div className="text-sm text-muted">
+          <div className="text-sm text-muted" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} MI-TIC. {t.contact.copyright}
           </div>
           <div className="flex gap-6 text-sm text-muted">

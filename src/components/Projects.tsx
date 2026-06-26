@@ -12,12 +12,13 @@ import {
   TrendingUp,
   Wrench,
 } from "lucide-react";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data/projects";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { AnimatedSection, SectionHeader } from "./AnimatedSection";
 
 export function Projects() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const projects = getProjects(locale);
   const [activeProject, setActiveProject] = useState(0);
   const project = projects[activeProject];
 

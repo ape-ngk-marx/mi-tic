@@ -7,12 +7,12 @@ import {
   Code2,
   GitBranch,
   Layers,
-  Shield,
-  Users,
+  Smartphone,
+  Server,
 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-const roleIcons = [Code2, Cloud, GitBranch, Layers, Users, Shield];
+const capabilityIcons = [Code2, Cloud, Layers, Smartphone, Server, GitBranch];
 
 export function Hero() {
   const { t } = useTranslation();
@@ -34,13 +34,22 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light px-4 py-2 text-sm text-accent"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light px-4 py-2 text-sm text-accent"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
             </span>
             {t.hero.available}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.15 }}
+            className="mb-4 text-2xl font-bold tracking-widest text-accent md:text-3xl"
+          >
+            {t.hero.companyName}
           </motion.div>
 
           <h1 className="mb-6 text-4xl leading-tight font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
@@ -62,10 +71,10 @@ export function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#architecture"
+              href="#founder"
               className="rounded-xl border border-card-border bg-card px-8 py-4 font-medium transition-all hover:border-accent/40 hover:bg-accent-light"
             >
-              {t.hero.exploreArchitecture}
+              {t.hero.meetFounder}
             </a>
           </div>
 
@@ -92,18 +101,18 @@ export function Hero() {
             transition={{ delay: 0.8 }}
             className="flex flex-wrap items-center justify-center gap-3"
           >
-            {t.hero.roles.map((role, i) => {
-              const Icon = roleIcons[i];
+            {t.hero.capabilities.map((cap, i) => {
+              const Icon = capabilityIcons[i];
               return (
                 <motion.div
-                  key={role}
+                  key={cap}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 + i * 0.05 }}
                   className="flex items-center gap-2 rounded-full border border-card-border bg-card px-4 py-2 text-sm text-muted shadow-sm"
                 >
                   <Icon className="h-4 w-4 text-accent-secondary" />
-                  {role}
+                  {cap}
                 </motion.div>
               );
             })}

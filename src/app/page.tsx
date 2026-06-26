@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { FounderSection } from "@/components/FounderSection";
 import { Projects } from "@/components/Projects";
 import { SoftwareArchitecture } from "@/components/SoftwareArchitecture";
 import { EngineeringProcess } from "@/components/EngineeringProcess";
@@ -18,6 +19,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <FounderSection />
         <Projects />
         <SoftwareArchitecture />
         <EngineeringProcess />

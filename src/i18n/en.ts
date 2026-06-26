@@ -2,6 +2,7 @@ import type { Translations } from "./types";
 
 export const en: Translations = {
   nav: {
+    founder: "Founder",
     projects: "Projects",
     architecture: "Architecture",
     process: "Process",
@@ -12,37 +13,50 @@ export const en: Translations = {
     techStack: "Tech Stack",
     gallery: "Gallery",
     tiktok: "TikTok",
-    letsTalk: "Let's Talk",
+    letsTalk: "Contact Us",
     toggleMenu: "Toggle menu",
   },
   hero: {
-    available: "Available for complex projects",
-    titleLine1: "I Build Software That",
+    available: "Accepting remote missions worldwide",
+    companyName: "MI-TIC",
+    titleLine1: "We Build Software That",
     titleHighlight: "Solves Business Problems",
     subtitle:
-      "Senior engineer specializing in architecting scalable systems, automating infrastructure, and delivering measurable business outcomes — from discovery to production.",
-    viewCaseStudies: "View Case Studies",
-    exploreArchitecture: "Explore Architecture",
+      "MI-TIC is a technology company specializing in full-stack development, cloud architecture, and DevOps. We partner with organizations to design, build, and scale digital products — from SaaS platforms to mobile applications.",
+    viewCaseStudies: "View Our Work",
+    exploreArchitecture: "Our Architecture",
+    meetFounder: "Meet the Founder",
     stats: [
-      { value: "50+", label: "Projects Delivered" },
-      { value: "99.9%", label: "Average Uptime Achieved" },
-      { value: "12+", label: "Industries Served" },
-      { value: "8+", label: "Years Experience" },
+      { value: "8+", label: "Years of Experience" },
+      { value: "12,500+", label: "SaaS Users Served" },
+      { value: "6+", label: "Industries Delivered" },
+      { value: "5,000+", label: "Social Platform Users" },
     ],
-    roles: [
-      "Senior Full Stack Engineer",
-      "Cloud Engineer",
-      "DevOps Engineer",
-      "Software Architect",
-      "Technical Consultant",
-      "Freelance Expert",
+    capabilities: [
+      "Full Stack Development",
+      "Cloud & DevOps",
+      "Software Architecture",
+      "Mobile Applications",
+      "SaaS Platforms",
+      "Remote Missions",
     ],
+  },
+  founder: {
+    label: "Leadership",
+    title: "Founded by Marx N'Guessan",
+    description:
+      "MI-TIC was founded by Marx N'Guessan, Senior Software Engineer with 8+ years of experience at companies including ape factory GmbH, Inetum, MMPG Softwares, and Novate Digital.",
+    experienceTitle: "Professional Experience",
+    remoteMissions:
+      "Marx accepts select remote freelance missions — available for architecture consulting, full-stack development, and DevOps engagements worldwide.",
+    bio: "Senior Software Engineer with 8+ years of experience delivering full-stack web, mobile, and cloud solutions across Europe and Africa. Currently Front-end Lead at ape factory GmbH, Marx founded MI-TIC to help businesses transform ideas into production-ready software.",
+    founderTitle: "Founder & Senior Software Engineer",
   },
   projects: {
     label: "Case Studies",
-    title: "Business Problems, Engineering Solutions",
+    title: "Real Projects, Measurable Impact",
     description:
-      "Every project starts with a business challenge. Here's how software architecture and engineering excellence translate into measurable outcomes.",
+      "From social platforms to SaaS products and mobile applications — discover how MI-TIC delivers business value through software engineering excellence.",
     businessProblem: "Business Problem",
     solution: "Solution",
     architectureDecisions: "Architecture & Technical Decisions",
@@ -259,11 +273,11 @@ export const en: Translations = {
     noVideos: "Add your TikTok video IDs in src/data/tiktokVideos.ts",
   },
   contact: {
-    label: "Let's Build Something Great",
-    titleLine1: "Ready to Solve Your",
-    titleHighlight: "Next Business Challenge?",
+    label: "Let's Build Together",
+    titleLine1: "Ready to Transform",
+    titleHighlight: "Your Next Digital Challenge?",
     description:
-      "Whether you need a senior engineer to architect your next platform, lead a DevOps transformation, or deliver a complex project from idea to production — let's talk.",
+      "Whether you need a technology partner to architect your next platform, scale an existing product, or deliver a complex project from idea to production — MI-TIC is ready to help.",
     getInTouch: "Get in Touch",
     linkedin: "LinkedIn",
     availableWorldwide: "Available Worldwide (Remote)",

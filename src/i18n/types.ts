@@ -2,6 +2,7 @@ export type Locale = "en" | "fr";
 
 export interface Translations {
   nav: {
+    founder: string;
     projects: string;
     architecture: string;
     process: string;
@@ -17,13 +18,24 @@ export interface Translations {
   };
   hero: {
     available: string;
+    companyName: string;
     titleLine1: string;
     titleHighlight: string;
     subtitle: string;
     viewCaseStudies: string;
     exploreArchitecture: string;
+    meetFounder: string;
     stats: { value: string; label: string }[];
-    roles: string[];
+    capabilities: string[];
+  };
+  founder: {
+    label: string;
+    title: string;
+    description: string;
+    experienceTitle: string;
+    remoteMissions: string;
+    bio: string;
+    founderTitle: string;
   };
   projects: {
     label: string;

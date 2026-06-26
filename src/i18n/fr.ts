@@ -2,6 +2,7 @@ import type { Translations } from "./types";
 
 export const fr: Translations = {
   nav: {
+    founder: "Fondateur",
     projects: "Projets",
     architecture: "Architecture",
     process: "Processus",
@@ -12,37 +13,50 @@ export const fr: Translations = {
     techStack: "Technologies",
     gallery: "Galerie",
     tiktok: "TikTok",
-    letsTalk: "Contactez-moi",
+    letsTalk: "Nous Contacter",
     toggleMenu: "Ouvrir le menu",
   },
   hero: {
-    available: "Disponible pour des projets complexes",
-    titleLine1: "Je Conçois des Logiciels Qui",
+    available: "Missions remote acceptées dans le monde entier",
+    companyName: "MI-TIC",
+    titleLine1: "Nous Construisons des Logiciels Qui",
     titleHighlight: "Résolvent des Problèmes Métier",
     subtitle:
-      "Ingénieur senior spécialisé dans l'architecture de systèmes scalables, l'automatisation d'infrastructure et la livraison de résultats mesurables — de la découverte à la production.",
-    viewCaseStudies: "Voir les Études de Cas",
-    exploreArchitecture: "Explorer l'Architecture",
+      "MI-TIC est une entreprise technologique spécialisée en développement full-stack, architecture cloud et DevOps. Nous accompagnons les organisations dans la conception, le développement et la mise à l'échelle de produits digitaux — des plateformes SaaS aux applications mobiles.",
+    viewCaseStudies: "Voir Nos Réalisations",
+    exploreArchitecture: "Notre Architecture",
+    meetFounder: "Rencontrer le Fondateur",
     stats: [
-      { value: "50+", label: "Projets Livrés" },
-      { value: "99,9%", label: "Disponibilité Moyenne" },
-      { value: "12+", label: "Secteurs Servis" },
       { value: "8+", label: "Années d'Expérience" },
+      { value: "12 500+", label: "Utilisateurs SaaS" },
+      { value: "6+", label: "Secteurs Livrés" },
+      { value: "5 000+", label: "Utilisateurs Plateforme Sociale" },
     ],
-    roles: [
-      "Ingénieur Full Stack Senior",
-      "Ingénieur Cloud",
-      "Ingénieur DevOps",
-      "Architecte Logiciel",
-      "Consultant Technique",
-      "Expert Freelance",
+    capabilities: [
+      "Développement Full Stack",
+      "Cloud & DevOps",
+      "Architecture Logicielle",
+      "Applications Mobiles",
+      "Plateformes SaaS",
+      "Missions Remote",
     ],
+  },
+  founder: {
+    label: "Direction",
+    title: "Fondée par Marx N'Guessan",
+    description:
+      "MI-TIC a été fondée par Marx N'Guessan, Ingénieur Logiciel Senior avec plus de 8 ans d'expérience chez ape factory GmbH, Inetum, MMPG Softwares et Novate Digital.",
+    experienceTitle: "Expérience Professionnelle",
+    remoteMissions:
+      "Marx accepte des missions freelance remote sélectionnées — disponible pour du conseil en architecture, développement full-stack et engagements DevOps dans le monde entier.",
+    bio: "Ingénieur Logiciel Senior avec plus de 8 ans d'expérience en solutions web, mobile et cloud en Europe et en Afrique. Actuellement Front-end Lead chez ape factory GmbH, Marx a fondé MI-TIC pour accompagner les entreprises dans la transformation de leurs idées en logiciels prêts pour la production.",
+    founderTitle: "Fondateur & Ingénieur Logiciel Senior",
   },
   projects: {
     label: "Études de Cas",
-    title: "Problèmes Métier, Solutions Techniques",
+    title: "Projets Réels, Impact Mesurable",
     description:
-      "Chaque projet commence par un défi business. Voici comment l'architecture logicielle et l'excellence technique se traduisent en résultats mesurables.",
+      "Des plateformes sociales aux produits SaaS et applications mobiles — découvrez comment MI-TIC apporte de la valeur métier grâce à l'excellence technique.",
     businessProblem: "Problème Métier",
     solution: "Solution",
     architectureDecisions: "Architecture & Décisions Techniques",
@@ -259,11 +273,11 @@ export const fr: Translations = {
     noVideos: "Ajoutez vos IDs vidéo TikTok dans src/data/tiktokVideos.ts",
   },
   contact: {
-    label: "Construisons Quelque Chose de Grand",
-    titleLine1: "Prêt à Résoudre Votre",
-    titleHighlight: "Prochain Défi Métier ?",
+    label: "Construisons Ensemble",
+    titleLine1: "Prêt à Transformer",
+    titleHighlight: "Votre Prochain Défi Digital ?",
     description:
-      "Que vous ayez besoin d'un ingénieur senior pour architecturer votre prochaine plateforme, piloter une transformation DevOps ou livrer un projet complexe de l'idée à la production — parlons-en.",
+      "Que vous ayez besoin d'un partenaire technologique pour architecturer votre prochaine plateforme, scaler un produit existant ou livrer un projet complexe de l'idée à la production — MI-TIC est prêt à vous accompagner.",
     getInTouch: "Me Contacter",
     linkedin: "LinkedIn",
     availableWorldwide: "Disponible Mondialement (Remote)",

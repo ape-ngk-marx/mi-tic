@@ -15,6 +15,7 @@ import {
   Briefcase,
   Image,
   Video,
+  User,
 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -25,6 +26,7 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
+    { label: t.nav.founder, href: "#founder", icon: User },
     { label: t.nav.projects, href: "#projects", icon: Briefcase },
     { label: t.nav.architecture, href: "#architecture", icon: Layers },
     { label: t.nav.process, href: "#process", icon: GitBranch },
