@@ -96,7 +96,7 @@ const experiencesFr: Experience[] = [
     company: "ape factory GmbH",
     role: "Ingénieur Logiciel Senior, Lead Front-end, Cloud & IA",
     period: "Sep 2021 - Aujourd'hui",
-    location: "Munich, Allemagne · Remote & déplacements réguliers en Europe",
+    location: "Munich, Allemagne · Remote & déplacements réguliers",
     description:
       "Cabinet de conseil cloud-native basé à Munich. Mission en remote depuis la Côte d'Ivoire avec des déplacements réguliers en Europe, du lead front-end au cloud, à l'IA et au DevOps.",
     highlights: [

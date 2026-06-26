@@ -20,7 +20,7 @@ export function FounderSection() {
           description={t.founder.description}
         />
 
-        <div className="mb-16 grid gap-10 lg:grid-cols-5">
+        <div className="grid gap-10 lg:grid-cols-5">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,15 +50,6 @@ export function FounderSection() {
                   <ExternalLink className="h-4 w-4" />
                   LinkedIn
                 </a>
-                <a
-                  href={founder.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-xl border border-card-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
-                >
-                  <Code2 className="h-4 w-4" />
-                  GitHub
-                </a>
               </div>
 
               <div className="mt-6 rounded-xl border border-accent/20 bg-accent-light p-4">
@@ -87,7 +78,7 @@ export function FounderSection() {
                   transition={{ delay: index * 0.08 }}
                   className="rounded-xl border border-card-border bg-card p-5 shadow-sm transition-all hover:border-accent/30 hover:shadow-md"
                 >
-                  <div className="mb-2 flex flex-wrap items-start justify-between gap-2">
+                  <div className="mb-2 flex items-start justify-between gap-2">
                     <div>
                       <h5 className="font-semibold text-accent">{exp.company}</h5>
                       <p className="text-sm font-medium">{exp.role}</p>

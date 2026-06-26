@@ -48,15 +48,6 @@ export function Hero() {
             {t.hero.available}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.15 }}
-            className="mb-4 text-2xl font-bold tracking-widest text-accent md:text-3xl"
-          >
-            {t.hero.companyName}
-          </motion.div>
-
           <h1 className="mb-6 text-4xl leading-tight font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
             {t.hero.titleLine1}
             <br />
